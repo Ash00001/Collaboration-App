@@ -1,0 +1,8 @@
+{
+  "name": "FineApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "3f3c38c8"
+}
