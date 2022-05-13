@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Create new account</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label color="dark" position="floating"><b>Name</b></ion-label>
+    <ion-input color="dark" [(ngModel)]="name" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" position="floating"><b>Email</b></ion-label>
+    <ion-input color="dark" [(ngModel)]="email" type="text" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" position="floating"><b>Password</b></ion-label>
+    <ion-input color="dark" [(ngModel)]="password" type="password" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label color="dark" position="floating"><b>Confirm Password</b></ion-label>
+    <ion-input color="dark" [(ngModel)]="confirm_password" type="password" required></ion-input>
+  </ion-item>
+
+  <ion-button class="ion-margin-top" type="submit" expand="block" (click)="onSubmit()">
+    Create Account
+  </ion-button>
+
+  <ion-item class="ion-text-center">
+    <ion-label color="dark" ><b>Already Have an Account?</b></ion-label>
+  </ion-item>
+
+  <ion-button expand="block" fill="outline" [routerLink]="['/sign-in']">Login</ion-button>
+</ion-content>

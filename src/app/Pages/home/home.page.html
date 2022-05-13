@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="top_menu">
+      <div class="top_menu_text">FineApp</div>
+      <div class="btn_group">
+        <ion-tab-button class="top_menu_logout" (click)="logout()">Logout</ion-tab-button>
+    </div>
+    </div>
+    </ion-title>
+
+    <div class="top_menu_tabs">
+      <div class="top_menu_tabs_chats">
+         <ion-tab-button class="top_menu_chats" routerLink ="/home/chats"> CHATS</ion-tab-button>
+         <ion-tab-button class="top_menu_status" routerLink ="/home/status">GROUPS</ion-tab-button>
+         <ion-tab-button class="top_menu_status" routerLink ="/home/create">NEW</ion-tab-button>
+      </div>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+</ion-content>

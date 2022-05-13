@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+   <div class="message_title" slot="start">
+     <ion-buttons class="message_back_button">
+       <ion-back-button defaultHref="home" (click)="unsubscribe()"></ion-back-button>
+     </ion-buttons>
+     <div class="messages_profile_pic"><ion-avatar>
+      <img src="/assets/icon/group.webp">
+    </ion-avatar></div>
+    <ion-title>{{data.name}}</ion-title>
+   </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="message_content">
+    <div *ngFor="let c of data.messages; index as i">
+
+    <div class="message_receiver" *ngIf="user._id == c.from; else elseBlock">
+      <b>{{user.name}}</b><br>
+        {{c.message}}
+    </div>
+    <ng-template #elseBlock><div class="message_chats"><b>{{names.get(c.from)}}</b><br>
+        {{c.message}}<br>
+    </div></ng-template>
+  </div>
+    
+  </div>
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <div class="chat_input">
+    <div class="chat_icons">
+      <ion-icon name="happy-outline"></ion-icon>
+
+    </div>
+
+      <input type="text" name="chat" [(ngModel)]="chat">
+      <div class="chat_icons">
+        <ion-icon name="send" (click)="postGroupmessage()"></ion-icon>
+      </div>
+    </div>
+  </ion-toolbar>
+
+</ion-footer>

@@ -1,0 +1,17 @@
+<ion-content>
+  <div *ngFor="let c of chats; index as i">
+    <div class="chats" (click)="selectGroup(c)">
+      <ion-avatar class="chats_avatar">
+        <img class="chats_profile_pic"
+        src="/assets/icon/group.webp">
+      </ion-avatar>
+      <div class="chats_name">
+        <div><strong>{{c.name}}</strong></div>
+        <div><p>{{getLastMessage(i)}}</p></div>
+
+      </div>
+
+    </div>
+
+  </div>
+</ion-content>

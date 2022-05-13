@@ -1,0 +1,49 @@
+.top_menu{
+    display: flex;
+}
+
+.top_menu_text{
+    flex: 1;
+}
+
+.top_menu_tabs{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    margin-bottom: 2px;
+    div{
+        span{
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            padding: 2px;
+        
+            background: #fff;
+             color: #075E54;
+            text-align: center;
+        
+            font: 9px Arial, sans-serif;
+           
+        }
+    }
+    .top_menu_camera{
+        margin-left: 8px;
+        font-size: 20px;
+        color: grey;
+        justify-content: space-around;
+    }
+
+    .top_menu_tabs_chats{
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+        margin-bottom: 5px;
+    }
+
+    .btn_group{
+        display: flex;
+        flex: 1;
+        background-color: #613385;
+    }
+}

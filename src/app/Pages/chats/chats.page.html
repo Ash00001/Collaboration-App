@@ -1,0 +1,17 @@
+<ion-content>
+  <div *ngFor="let c of chats; index as i">
+    <div class="chats" (click)="selectChat(c)">
+      <ion-avatar class="chats_avatar">
+        <img class="chats_profile_pic"
+        src="/assets/icon/user.png">
+      </ion-avatar>
+      <div class="chats_name" *ngIf="user._id == c.from; else elseBlock">
+        <strong>{{c.name}}</strong><div><p>{{getLastMessage(i)}}</p></div></div>
+      <ng-template #elseBlock><div class="chats_name"><strong>{{names.get(c.name)}}</strong><div><p>{{getLastMessage(i)}}</p></div>
+      </div></ng-template>
+        
+
+      </div>
+
+    </div>
+</ion-content>
